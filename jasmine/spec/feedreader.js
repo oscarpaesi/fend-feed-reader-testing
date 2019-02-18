@@ -112,9 +112,31 @@ $(function() {
      * @description Test suite for the selection of a new feed
      */
     describe('New Feed Selection', function() {
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
+
+        let initialContent;
+
+        /**
+         * @description Call loadFeed a non-default feed, keep the content,
+         * then call loadFeed again with the default feed. Wait for
+         * everything to complete.
          */
+        beforeEach(function(done) {
+            loadFeed(1, function() {
+
+                initialContent = $('.feed').html();
+
+                loadFeed(0, function() {
+                    done();
+                });
+            });
+        });
+
+        /**
+         * @description Ensures the content of the list is different.
+         */
+        it('changes the content of the feed', function() {
+            const currentContent = $('.feed').html();
+            expect(currentContent).not.toBe(initialContent);
+        });
     });
 }());
