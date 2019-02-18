@@ -27,7 +27,8 @@ $(function() {
         });
 
 
-        /* Ensures each feed has a URL defined
+        /*
+         * Ensures each feed has a URL defined
          * and that the URL is not empty.
          */
         it('have URL', function () {
@@ -38,10 +39,16 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
+        /*
+         * Ensures that each feed has a name defined
          * and that the name is not empty.
          */
+        it('have names', function () {
+            for (const feed of allFeeds) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name).toBeTruthy();
+            }
+        });
     });
 
 
