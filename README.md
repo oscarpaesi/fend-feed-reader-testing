@@ -5,7 +5,9 @@ Unit tests, using [Jasmine][jasmine], for a Feed Reader application.
 The starter code for the project is available at [this repository][starter].
 
 # Running the project
-You can access the feed reader on your browser, by clicking [here][fend-feed-reader-testing-gh-page]. The test results will be visible at the bottom, under the **Jasmine** section.
+- You can access the feed reader on your browser, by clicking [here][fend-feed-reader-testing-gh-page].
+- If you prefer to run locally, you can do so by cloning or downloading the project and opening the `index.html` file on your browser.
+- The test results will be visible at the bottom of the page, under the **Jasmine** section.
 
 [udacity]: <https://www.udacity.com/>
 [fend]: <https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001>
