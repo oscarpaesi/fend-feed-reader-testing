@@ -31,19 +31,19 @@ $(function() {
          */
         it('have URLs', function () {
             for (const feed of allFeeds) {
-                expect(feed.url).toBeDefined();
+                // Make sure the URL is defined, not null, and not empty
                 expect(feed.url).toBeTruthy();
             }
         });
 
 
         /**
-         * @description Ensures that each feed has a name defined
+         * @description Ensures that every feed has a name defined
          * and that the name is not empty.
          */
         it('have names', function () {
             for (const feed of allFeeds) {
-                expect(feed.name).toBeDefined();
+                // Make sure the name is defined, not null, and not empty
                 expect(feed.name).toBeTruthy();
             }
         });
@@ -93,9 +93,7 @@ $(function() {
          * feed and wait for it to complete.
          */
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
         });
 
         /**
@@ -115,9 +113,9 @@ $(function() {
         let initialContent;
 
         /**
-         * @description Call loadFeed a non-default feed, keep the content,
-         * then call loadFeed again with the default feed. Wait for
-         * everything to complete.
+         * @description Call loadFeed with a non-default feed,
+         * keep the content, then call loadFeed again with the
+         * default feed. Wait for everything to complete.
          */
         beforeEach(function(done) {
 
@@ -128,9 +126,7 @@ $(function() {
                 initialContent = $('.feed').html();
 
                 // Load a different feed
-                loadFeed(0, function() {
-                    done();
-                });
+                loadFeed(0, done);
             });
         });
 
