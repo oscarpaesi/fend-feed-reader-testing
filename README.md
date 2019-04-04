@@ -1,7 +1,7 @@
 # Feed Reader Testing
 Unit tests, using [Jasmine][jasmine], for a Feed Reader application.
 
-> This is a project assignment for [Udacity's][udacity] [Front End Wed Developer Nanodegree][fend].
+> This is a project assignment for [Udacity's][udacity] [Front End Web Developer Nanodegree][fend].
 The starter code for the project is available at [this repository][starter].
 
 # Running the project
